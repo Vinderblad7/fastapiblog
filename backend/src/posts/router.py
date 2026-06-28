@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, status 
 from sqlalchemy import select
 from src.dependencies import SessionDep
-from src.posts.schemas import PostCreateSchema, PostResponseSchema
+from src.posts.schemas import PostCreateSchema, PostResponseSchema, PostUpdateSchema
 from src.posts.models import PostModel
 
 
@@ -51,3 +51,26 @@ async def delete_by_id(post_id: int, session: SessionDep):
         )
     await session.delete(post)
     await session.commit()
+
+
+@router.patch("/{post_id}", response_model=PostResponseSchema)
+async def patch_by_id(post_id: int, data: PostUpdateSchema, session: SessionDep):
+    query = await session.execute(select(PostModel).where(PostModel.id == post_id))
+    post = query.scalar_one_or_none()
+    
+    if not post:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Пост не найден"
+        )
+    
+    update_data = data.model_dump(exclude_unset=True)
+    
+    for key, value in update_data.items():
+        setattr(post, key, value)
+        
+    session.add(post)
+    await session.commit()
+    await session.refresh(post)
+    
+    return post

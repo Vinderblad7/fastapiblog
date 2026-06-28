@@ -17,3 +17,8 @@ class PostResponseSchema(PostBaseSchema):
 
     class Config:
         from_attributes = True
+
+
+class PostUpdateSchema(BaseModel):
+    title: str | None = Field(None, min_length=3, max_length=155)
+    content: str | None = Field(None, min_length=3, max_length=1000)
