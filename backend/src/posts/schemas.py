@@ -1,6 +1,18 @@
 from pydantic import BaseModel, Field
 from datetime import datetime
 
+class TagBaseSchema(BaseModel):
+    title: str = Field(min_length=2, max_length=100)
+
+
+class TagCreateSchema(TagBaseSchema):
+    pass
+
+class TagResponseSchema(TagBaseSchema):
+    id: int
+
+    class Config:
+        from_attributes = True
 
 class PostBaseSchema(BaseModel):
     title: str = Field(min_length=3, max_length=155)
@@ -12,6 +24,7 @@ class PostCreateSchema(PostBaseSchema):
 class PostResponseSchema(PostBaseSchema):
 
     id: int
+    tags: list[TagResponseSchema]
     created_at: datetime
     updated_at: datetime
 
