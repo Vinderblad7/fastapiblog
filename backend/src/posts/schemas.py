@@ -19,7 +19,7 @@ class PostBaseSchema(BaseModel):
     content: str = Field(min_length=3, max_length=1000)
 
 class PostCreateSchema(PostBaseSchema):
-    pass
+    tags_ids: list[int] = Field(default=[])
 
 class PostResponseSchema(PostBaseSchema):
 
