@@ -45,7 +45,7 @@ async def get_by_id(post_id: int, session: SessionDep):
     if not post:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail="Пост не найден"
+            detail="Post not found"
         )
     return post
 
@@ -57,7 +57,7 @@ async def delete_by_id(post_id: int, session: SessionDep):
     if not post:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail="Пост не найден"
+            detail="Post not found"
         )
     await session.delete(post)
     await session.commit()
@@ -71,7 +71,7 @@ async def patch_by_id(post_id: int, data: PostUpdateSchema, session: SessionDep)
     if not post:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail="Пост не найден"
+            detail="Post not found"
         )
     
     update_data = data.model_dump(exclude_unset=True)

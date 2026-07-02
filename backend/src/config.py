@@ -13,3 +13,5 @@ class Settings(BaseSettings):
         return f"sqlite+aiosqlite:///{self.DB_NAME}"
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
+
+settings = Settings()
