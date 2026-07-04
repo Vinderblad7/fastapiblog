@@ -14,3 +14,4 @@ class Base(DeclarativeBase):
     pass
 
 from src.posts.models import PostModel
+from src.users.models import UserModel

@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, status 
 from sqlalchemy import select
 from sqlalchemy.orm import selectinload
-from src.dependencies import SessionDep
+from src.dependencies import SessionDep, CurrentUserDep
 from src.posts.schemas import PostCreateSchema, PostResponseSchema, PostUpdateSchema, TagResponseSchema, TagCreateSchema
 from src.posts.models import PostModel, TagsModel
 
@@ -13,7 +13,7 @@ tags_router = APIRouter(prefix="/tags", tags=["Tags"])
 # POSTS ENDPOINTS
 
 @posts_router.post("", response_model=PostResponseSchema)
-async def create(data: PostCreateSchema, session: SessionDep):
+async def create(data: PostCreateSchema, session: SessionDep, current_user: CurrentUserDep):
     tags_query = await session.execute(
         select(TagsModel).where(TagsModel.id.in_(data.tags_ids))
     )
@@ -22,7 +22,8 @@ async def create(data: PostCreateSchema, session: SessionDep):
     new_post = PostModel(
         title = data.title,
         content = data.content,
-        tags = actual_tags
+        tags = actual_tags,
+        user_id=current_user.id
     )
 
     session.add(new_post)

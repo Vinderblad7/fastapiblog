@@ -1,7 +1,7 @@
 from src.database import Base
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy import String, Column, Integer, Text, DateTime, func, Table, ForeignKey
-import datetime 
+import datetime
 
 post_tags_table = Table(
     "post_tags",
@@ -29,6 +29,7 @@ class PostModel(Base):
     id: Mapped[int] = mapped_column(primary_key=True, index=True)
     title: Mapped[str] = mapped_column(String(255), nullable=False)
     content: Mapped[str] = mapped_column(Text)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"))
     created_at: Mapped[datetime.datetime] = mapped_column(DateTime, server_default=func.now())
     updated_at: Mapped[datetime.datetime] = mapped_column(DateTime, server_default=func.now(), onupdate=func.now())
 
@@ -36,3 +37,8 @@ class PostModel(Base):
         secondary=post_tags_table, 
         back_populates="posts"  
     )
+
+    user: Mapped["UserModel"] = relationship(
+    back_populates="posts",
+    primaryjoin="PostModel.user_id == UserModel.id"
+)
