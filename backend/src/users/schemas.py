@@ -13,6 +13,13 @@ class UserResponseSchema(BaseModel):
     class Config:
         from_attributes = True
 
+class UserShortSchema(BaseModel):
+    id: int
+    username: str
+
+    class Config:
+        from_attributes = True
+
 class TokenSchema(BaseModel):
     access_token: str
     token_type: str
