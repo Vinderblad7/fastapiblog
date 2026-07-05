@@ -15,3 +15,4 @@ class Base(DeclarativeBase):
 
 from src.posts.models import PostModel
 from src.users.models import UserModel
+from src.comments.models import CommentModel

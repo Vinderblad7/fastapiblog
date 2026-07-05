@@ -16,5 +16,8 @@ class UserModel(Base):
     posts: Mapped[list["PostModel"]] = relationship(
     back_populates="user", 
     cascade="all, delete-orphan",
-    primaryjoin="UserModel.id == PostModel.user_id"
+    )
+
+    comments: Mapped[list["CommentModel"]] = relationship(
+    back_populates="user",
     )

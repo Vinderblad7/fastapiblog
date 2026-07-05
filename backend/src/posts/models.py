@@ -40,5 +40,8 @@ class PostModel(Base):
 
     user: Mapped["UserModel"] = relationship(
     back_populates="posts",
-    primaryjoin="PostModel.user_id == UserModel.id"
-)
+    )
+
+    comments: Mapped[list["CommentModel"]] = relationship(
+    back_populates="post",
+    )
