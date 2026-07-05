@@ -38,7 +38,7 @@
 1. **Клонируйте репозиторий:**
    ```bash
    git clone [https://github.com/Vinderblad7/fastapiblog.git](https://github.com/Vinderblad7/fastapiblog.git)
-   cd fastapiblog/backend```
+   cd fastapiblog/backend
 
 2. Создайте и активируйте виртуальное окружение
 python -m venv venv
