@@ -58,4 +58,38 @@
 }
 
 
+.posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 
+    max-width: var(--container-weight);
+    margin: 40px auto;
+}
+
+.post-card {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.post-card-image {
+    height: 400px;
+    width: 400px;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+.post-card__body {
+    padding: 18px;
+}
+
+.post-card__title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.post-card__description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
