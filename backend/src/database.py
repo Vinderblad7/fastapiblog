@@ -1,9 +1,9 @@
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker, AsyncSession
 from sqlalchemy.orm import DeclarativeBase
-from config import Settings
+from src.config import Settings
 
 
-engine = create_async_engine(Settings.DATABASE_URL)
+engine = create_async_engine(Settings().DATABASE_URL)
 new_session = async_sessionmaker(engine, expire_on_commit=False)
 
 async def get_session():
@@ -12,3 +12,7 @@ async def get_session():
 
 class Base(DeclarativeBase):
     pass
+
+from src.posts.models import PostModel
+from src.users.models import UserModel
+from src.comments.models import CommentModel
