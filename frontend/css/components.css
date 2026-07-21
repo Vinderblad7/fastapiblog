@@ -32,31 +32,24 @@
     align-items: center;
 }
 
-.header-register-button,
-.header-profile-button {
+.header-action-button {
+    display: inline-block;
+
+    border-radius: var(--border-radius);
+
+    text-decoration: none;
+
     padding: 6px 12px;
+    margin-right: 25px;
+
+}
+
+.header-avatar {
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
     margin-right: 15px;
-
 }
-
-.header-register-button {
-    display: inline-block;
-
-    border-radius: var(--border-radius);
-
-    text-decoration: none;
-}
-
-.header-profile-button {
-    display: inline-block;
-
-    color: var(--color-light);
-    background-color: var(--color-dark);
-    border-radius: var(--border-radius);
-
-    text-decoration: none;
-}
-
 
 .posts {
     display: grid;
