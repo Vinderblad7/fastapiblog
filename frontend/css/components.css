@@ -9,7 +9,7 @@
     margin: 0 auto;
     padding: 0 var(--container-padding-x);
     border-radius: 20px;
-    margin-top: 10px;
+    margin-top: 20px;
 
     display: flex;
     justify-content: space-between;
@@ -25,6 +25,10 @@
 .header-logo-image {
     height: 55px;
     width: auto;
+}
+
+.header-logo:hover {
+    transform: translateY(-2px);
 }
 
 .header-actions {
@@ -44,11 +48,19 @@
 
 }
 
+.header-action-button:hover {
+    transform: translateY(-2px);
+}
+
 .header-avatar {
     display: inline-block;
     border-radius: 50%;
     overflow: hidden;
     margin-right: 15px;
+}
+
+.header-avatar:hover {
+    transform: translateY(-2px);
 }
 
 .posts {
@@ -57,32 +69,93 @@
     gap: 30px;
 
     max-width: var(--container-weight);
-    margin: 40px auto;
+    margin: 25px auto;
 }
 
 .post-card {
+    background: var(--color-light);
+    
     border-radius: var(--border-radius);
+    
     overflow: hidden;
+
+    border: 1px solid var(--color-dark);
+
+    transition: .2s;
 }
 
-.post-card-image {
-    height: 400px;
-    width: 400px;
-    aspect-ratio: 16 / 10;
+.post-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+}
+
+.post-card__header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 10px 15px;
+}
+
+.post-card__author {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.post-card__avatar {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
     object-fit: cover;
 }
 
-.post-card__body {
-    padding: 18px;
+.post-card__username {
+    font-weight: 600;
+}
+
+.post-card__image {
+    width: 100%;
+
+    object-fit: cover;
+}
+
+.post-card__content {
+    padding: 15px;
 }
 
 .post-card__title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+
+    margin-bottom: 8px;
 }
 
 .post-card__description {
-    font-size: 0.9rem;
-    line-height: 1.5;
+    font-size: 16px;
+    color: var(--color-dark-gray);
+}
+
+.post-card__footer {
+    display: flex;
+
+    gap: 10px;
+
+    padding: 15px;
+}
+
+.post-card__action {
+    border: none;
+
+    background: transparent;
+    
+    font-size: 16px;
+
+    cursor: pointer;
 }

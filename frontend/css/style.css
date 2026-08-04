@@ -237,6 +237,10 @@ svg * {
   overflow: hidden !important;
 }
 
+body {
+    font-family: 'Manrope', sans-serif;
+}
+
 a,
 button,
 input,
