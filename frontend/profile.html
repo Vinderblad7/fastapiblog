@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VT Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/register.css">
+    <link rel="stylesheet" href="./css/profile.css">
+</head>
+<body>
+    <header class="header">
+
+        <div class="container">
+
+            <a class="header-logo" href="index.html">
+                <img class="header-logo-image"
+                 src="./assets/icons/Logo.svg"
+                 alt="VT Logo"
+                 width="50"
+                 height="50"
+                 loading="lazy">
+            </a>   
+
+            <div class="header-actions">
+
+               <button class="header-action-button" id="searchbutton">Search</button>
+
+               <a class="header-avatar" href="index.html">
+                <img class="header-avatar-image"
+                 src="./assets/images/avatar.jpeg"
+                 alt="User Avatar"
+                 width="40"
+                 height="40"
+                 loading="lazy">
+            </a>
+            
+            </div>
+            
+        </div>
+
+</header>
+
+<main class="profile">
+
+    <section class="profile-info">
+        <img class="profile-avatar"
+            src="./assets/images/avatar.jpeg"
+                alt="User Avatar"
+                width="100"
+                height="100"
+                loading="lazy"
+        >
+
+        <h1 class="profile-name">
+            Vadim
+        </h1>
+
+        <p class="profile-username">
+            @vadim_dev
+        </p>
+        
+        <p class="profile-bio">
+            Frontend Developer | Tech Enthusiast
+        </p>
+        
+        <div class="profile-stats">
+            
+            <div class="profile-stat">
+                <span class="profile-stat-number">120</span>
+                <span class="profile-stat-text">Posts</span>
+            </div>
+
+            <div class="profile-stat">
+                <span class="profile-stat-number">300</span>
+                <span class="profile-stat-text">Likes</span>
+            </div>
+
+            <button class="profile-edit-button">Edit Profile</button>
+
+        </div>
+    </section>
+
+    <section class="profile-posts">
+
+        <h2 class="profile-posts-title">My Posts</h2>
+
+        <div class="posts">
+            
+            <article class="post-card">
+
+                <div class="post-card__header">
+
+                    <div class="post-card__author">
+
+                        <img class="post-card__avatar"
+                            src="./assets/images/avatar.jpeg"
+                            alt="User Avatar"
+                        >
+
+                        <span class="post-card__username">
+                            Vadim
+                        </span>
+
+                    </div>
+                </div>
+
+                <img class="post-card__image"
+                    src="./assets/images/1.jpg"
+                    alt="Post Image"
+                >
+
+                <div class="post-card__content">
+
+                    <h2 class="post-card__title">My First Post</h2>
+
+                    <p class="post-card__description">
+                        This is the description of the post. Later it will come from the backend
+                    </p>
+
+                </div>
+
+                <div class="post-card__footer">
+
+                    <button class="post-card__action">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="post-card__action-icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z" />
+                        </svg>
+              
+                        <span>123</span>
+
+                    </button>  
+
+                </div>
+                    
+            </article> 
+
+        </div>
+
+    </section>
+
+</main>
+
+</body>
