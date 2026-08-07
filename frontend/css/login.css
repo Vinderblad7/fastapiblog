@@ -53,15 +53,29 @@
     gap: 15px;
 }
 
-.login-input {
+.login-form__group {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+.login-form__input {
+    flex: 1;
     padding: 10px 14px;
 
     font-size: 16px;
 
-    border: 1px solid var(--color-light-gray);
+    border: 1px solid var(--color-dark-gray);
     border-radius: var(--border-radius);
 
     background-color: var(--color-white);
+}
+
+.login-form__label {
+    width: 100px;
+    text-align: right;
 }
 
 .login-form__button{

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VT Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/register.css">
+    <link rel="stylesheet" href="./css/profile.css">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+    <header class="header">
+
+        <div class="container">
+
+            <a class="header-logo" href="index.html">
+                <img class="header-logo-image"
+                 src="./assets/icons/Logo.svg"
+                 alt="VT Logo"
+                 width="50"
+                 height="50"
+                 loading="lazy">
+            </a>   
+
+            <div class="header-actions">
+
+               <button class="header-action-button" id="searchbutton">Search</button>
+
+               <a href="login.html">
+                <button class="header-action-button" id="loginbutton">Login</button>
+               </a>
+
+               <a class="header-avatar" href="index.html">
+                <img class="header-avatar-image"
+                 src="./assets/images/avatar.jpeg"
+                 alt="User Avatar"
+                 width="40"
+                 height="40"
+                 loading="lazy">
+            </a>
+            
+            </div>
+            
+        </div>
+
+</header>
+
+<main class="register">
+    <div class="register-card">
+            <img class="register-card__logo"
+                 src="./assets/icons/Logo.svg"
+                 alt="VT Logo"
+                 width="50"
+                 height="50"
+                 loading="lazy"
+            >
+
+            <h1 class="register-title">
+                Welcome!
+            </h1>
+
+            <p class="register-subtitle">
+                Create an account to get started.
+            </p>
+
+            <form class="register-form" action="/register" method="post">
+
+                <div class="register-form__group">
+                    <label for="username" class="register-form__label">Username</label>
+                    <input type="text" id="username" name="username" class="register-form__input" required>
+                </div>
+
+                <div class="register-form__group">
+                    <label for="email" class="register-form__label">Email</label>
+                    <input type="email" id="email" name="email" class="register-form__input" required>
+                </div>
+
+                <div class="register-form__group">
+                    <label for="password" class="register-form__label">Password</label>
+                    <input type="password" id="password" name="password" class="register-form__input" required>
+                </div>
+
+                <div class="register-form__group">
+                    <label for="confirm_password" class="register-form__label">Confirm Password</label>
+                    <input type="password" id="confirm_password" name="confirm_password" class="register-form__input" required>
+                </div>
+
+                <button type="submit" class="register-form__button">Sign Up</button>
+
+            </form>
+
+            <p class="login-register">
+                Already have an account? <a href="login.html" class="login-register__link">Sign In</a>
+            </p>
+</main>
+
+</body>
