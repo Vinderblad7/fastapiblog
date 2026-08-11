@@ -4,7 +4,7 @@
     padding: 0 15px;
 }
 
-.post-page__back-link {
+.back-link {
     display: inline-flex;
 
     margin-bottom: 25px;
@@ -16,7 +16,7 @@
     font-weight: 500;
 }
 
-.post-page__back-link:hover {
+.back-link:hover {
     transform: translateY(-2px);
     opacity: 0.7;
 }

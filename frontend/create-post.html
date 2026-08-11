@@ -12,7 +12,10 @@
     <link rel="stylesheet" href="./css/register.css">
     <link rel="stylesheet" href="./css/profile.css">
     <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/post.css">
+    <link rel="stylesheet" href="./css/create-post.css">
 </head>
+
 <body>
 
     <header class="header">
@@ -55,49 +58,47 @@
 
     </header>
 
-    <main class="login">
+        <main class="create-post">
 
-        <div class="login-card">
-            <img class="login-card__logo"
-                 src="./assets/icons/Logo.svg"
-                 alt="VT Logo"
-                 width="50"
-                 height="50"
-                 loading="lazy"
-            >
-        
+            <a href="index.html" class="back-link">Back To Home</a>
 
-            <h1 class="login-title">
-                Welcome back!
-            </h1>
+            <div class="create-post__container">
 
-            <p class="login-subtitle">
-                Sign in to your account to continue.
-            </p>
+                <h1 class="create-post__title">
+                    Create New Post
+                </h1>
 
-            <form class="login-form" action="/login" method="post">
+                <form class="create-post__form">
 
-                <div class="login-form__group">
-                    <label for="username" class="login-form__label">Username</label>
-                    <input type="text" id="username" name="username" class="login-form__input" required>
-                </div>
+                    <div class="create-post__image">
 
-                <div class="login-form__group">
-                    <label for="password" class="login-form__label">Password</label>
-                    <input type="password" id="password" name="password" class="login-form__input" required>
-                </div>
+                        <span>Upload Image</span>
 
-                <button type="submit" class="login-form__button">Sign In</button>
+                        <button type="button">
+                            + Add Image
+                        </button>
 
-            </form>
+                    </div>
 
-            <p class="login-register">
-                Don't have an account? <a href="register.html" class="login-register__link">Sign Up</a>
-            </p>
+                    <lable class="create-post__lable">
+                        Title
+                    </lable>
 
-        </div>
+                    <input class="create-post__input" type="text" placeholder="Enter post title">
 
-    </main>
+                    <label class="create-post__label">
+                        Description
+                    </label>
 
+                    <textarea class="create-post__description" placeholder="Write something..."></textarea>
+
+                    <button class="create-post__submit" type="submit">
+                        Publish
+                    </button>
+
+                </form>
+
+            </div>
+        </main>
 
 </body>

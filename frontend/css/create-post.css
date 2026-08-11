@@ -1,0 +1,140 @@
+.create-post {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    min-height: calc(100vh - var(--header-height));
+
+    padding: 50px 15px;
+}
+
+.create-post__container {
+    padding: 30px;
+    
+    border-radius: 10px;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+
+    background-color: var(--color-white);
+}
+
+.create-post__title {
+    margin-bottom: 35px;
+    
+    font-size: 28px;
+    text-align: center;
+}
+
+.create-post__form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.create-post__image {
+    min-height: 280px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+    border: 2px dashed var(--color-dark-gray);
+    border-radius: 16px;
+}
+
+.create-post__image button {
+    padding: 10px 18px;
+
+    border: none;
+    border-radius: var(--border-radius);
+
+    background-color: var(--color-dark);
+    color: var(--color-light);
+
+    cursor: pointer;
+
+    transition: var(--transition-duration);
+}
+
+.create-post__image button:hover {
+    transform: translateY(-2px);
+    opacity: 0.8;
+}
+
+.create-post__label {
+    margin-top: 10px;
+
+    font-weight: 600;
+}
+
+.create-post__input {
+    width: 100%;
+    
+    padding: 14px 16px;
+
+    border: 1px solid var(--color-dark-gray);
+    border-radius: var(--border-radius);
+
+    outline: none;
+
+    background-color: var(--color-light);
+
+    transition: var(--transition-duration);
+}
+
+.create-post__input:focus {
+    border-color: var(--color-dark);
+}
+
+.create-post__description {
+    width: 100%;
+    min-height: 180px;
+
+    padding: 14px 16px;
+
+    resize: vertical;
+
+    border: 1px solid var(--color-dark-gray);
+    border-radius: var(--border-radius);
+
+    outline: none;
+
+    line-height: 1.5;
+
+    transition: var(--transition-duration);
+}
+
+.create-post__description:focus {
+    border-color: var(--color-dark);
+}
+
+.create-post__submit {
+    margin-top: 15px;
+
+    padding: 14px 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: var(--color-dark);
+    color: var(--color-light);
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: var(--transition-duration);
+}
+
+.create-post__submit:hover {
+    transform: translateY(-2px);
+
+    background-color: var(--color-dark-gray);
+}
