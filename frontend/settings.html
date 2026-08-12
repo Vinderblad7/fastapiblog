@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VT Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/register.css">
+    <link rel="stylesheet" href="./css/profile.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/post.css">
+    <link rel="stylesheet" href="./css/create-post.css">
+    <link rel="stylesheet" href="./css/settings.css">
+</head>
+<body>
+    <header class="header">
+
+        <div class="container">
+
+            <a class="header-logo" href="index.html">
+                <img class="header-logo-image"
+                 src="./assets/icons/Logo.svg"
+                 alt="VT Logo"
+                 width="50"
+                 height="50"
+                 loading="lazy">
+            </a>   
+
+            <div class="header-actions">
+
+                <a href="create-post.html">
+                    <button class="header-action-button" id="create-postbutton">Create Post</button>
+                </a>
+
+               <button class="header-action-button" id="searchbutton">Search</button>
+
+               <a href="settings.html">
+                    <button class="header-action-button" id="settingsbutton">Settings</button>
+               </a>
+
+               <a href="login.html">
+                <button class="header-action-button" id="loginbutton">Login</button>
+               </a>
+
+               <a class="header-avatar" href="profile.html">
+                <img class="header-avatar-image"
+                 src="./assets/images/avatar.jpeg"
+                 alt="User Avatar"
+                 width="40"
+                 height="40"
+                 loading="lazy">
+            </a>
+            
+            </div>
+            
+        </div>
+
+    </header>
+
+    <main class="settings">
+
+        <a href="index.html" class="back-link">Back To Home</a>
+
+        <div class="settings__container">
+            
+            <h1 class="settings__title">Profile Settings</h1>
+
+            <section class="settings-section">
+
+                <h2 class="settings-section__title">
+                    Profile photo
+                </h2>
+
+                <div class="settings-avatar">
+
+                    <img 
+                    class="settings-avatar__image"
+                    src="./assets/images/avatar.jpeg"
+                    alt="Profile avatar"
+                    >
+
+                    <button
+                        type="button"
+                        class="settings-avatar__button"
+                    >Change photo
+                    </button>
+
+                </div>
+
+            </section>
+
+            <section class="settings-section">
+
+                <h2 class="settins-section__title">
+                    Personal information
+                </h2>
+
+                <form class="settings-form">
+
+                    <label class="settings-form__label">
+                        Username
+
+                        <input
+                            type="text"
+                            class="settings-form__input"
+                            value="Vadim"
+                        >
+
+                    </label>
+
+                    <label class="settings-form__label">
+                        Email
+
+                        <input
+                            type="email"
+                            class="settings-form__input"
+                            value="example@mail.com"
+                        >
+
+                    </label>
+
+                    <lable class="settings-form__label">
+                        Bio
+
+                        <textarea
+                            class="settings-form__textarea">
+                            Frontend developer. Learning HTML, CSS and FastAPI.
+                        </textarea>
+                        
+                    </lable>
+
+                    <button 
+                        class="settings-form__submit"
+                        type="submit"
+                    >
+                        Save changes
+                    </button>
+
+
+                </form>
+
+            </section>
+
+            <section class="settings-section">
+
+                <h2 class="settings-section__title">
+                    Security
+                </h2>
+
+                <button
+                    type="button"
+                    class="settings-security__button"
+                >
+                    Change password
+                </button>
+
+            </section>
+
+            <section class="settings-section settings-section__danger">
+
+                <h2 class="settings-section__title">
+                    Danger zone
+                </h2>
+
+                <div class="settings-actions__danger">
+
+                    <button
+                        type="button"
+                        class="settings-logout__button"
+                    >
+                        Log out
+                    </button>
+
+                    <button
+                        type="button"
+                        class="settings-delete__button"
+                    >
+                        Delete account
+                    </button>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
