@@ -138,3 +138,11 @@
 
     background-color: var(--color-dark-gray);
 }
+
+@media (max-width: 650px) {
+
+    .create-post {
+        padding: 25px 15px;
+    }
+    
+}
