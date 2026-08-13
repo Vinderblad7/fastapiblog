@@ -198,3 +198,12 @@
 .post-comment__text {
     margin: 0;
 }
+
+@media (max-width: 650px) {
+
+    .post-page {
+        margin: 20px auto;
+    }
+
+}
+

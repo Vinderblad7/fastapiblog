@@ -110,3 +110,9 @@
 
     margin-top: 10px;
 }
+
+@media (max-width: 650px) {
+    .login-card {
+        margin-top: 30px;
+    }
+}
