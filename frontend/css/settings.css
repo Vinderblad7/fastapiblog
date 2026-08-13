@@ -221,3 +221,19 @@
     transform: translateY(-2px);
     background-color: #860122;
 }
+
+@media (max-width: 1240px) {
+
+    .header {
+        margin-inline: 20px;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .settings {
+        padding: 25px 15px
+    }
+
+}
